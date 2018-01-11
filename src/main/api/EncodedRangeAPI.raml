@@ -1,0 +1,22 @@
+#%RAML 1.0
+version: v1
+
+title: EncodedRangeAPI
+types: 
+  EncodedRange: !include types/EncodedRangeType.raml
+
+/EncodedRange:
+  get:
+    queryParameters: 
+      startValue:  
+        required: true
+        type: integer
+      endValue:  
+        required: true
+        type: integer
+    responses: 
+      200:
+        body: 
+          application/json:
+            type: EncodedRange
+            example: !include examples/EncodedRange_example.json

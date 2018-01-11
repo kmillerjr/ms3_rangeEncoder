@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RangeEncoded>
+  <exclusiveMaximum>true</exclusiveMaximum>
+  <maximum>10</maximum>
+  <minimum>1</minimum>
+  <range>
+    <increment>
+      <encoded>1</encoded>
+      <value>1</value>
+    </increment>
+    <increment>
+      <encoded>2</encoded>
+      <value>2</value>
+    </increment>
+    <increment>
+      <encoded>ME</encoded>
+      <value>3</value>
+    </increment>
+    <increment>
+      <encoded>4</encoded>
+      <value>4</value>
+    </increment>
+    <increment>
+      <encoded>5</encoded>
+      <value>5</value>
+    </increment>
+    <increment>
+      <encoded>ME</encoded>
+      <value>6</value>
+    </increment>
+    <increment>
+      <encoded>MS3</encoded>
+      <value>7</value>
+    </increment>
+    <increment>
+      <encoded>8</encoded>
+      <value>8</value>
+    </increment>
+    <increment>
+      <encoded>ME</encoded>
+      <value>9</value>
+    </increment>
+    <increment>
+      <encoded>10</encoded>
+      <value>10</value>
+    </increment>
+  </range>
+</RangeEncoded>

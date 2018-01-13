@@ -1,0 +1,403 @@
+[
+    {
+        "value": 1,
+        "encoded": "1"
+    },
+    {
+        "value": 2,
+        "encoded": "2"
+    },
+    {
+        "value": 3,
+        "encoded": "ME"
+    },
+    {
+        "value": 4,
+        "encoded": "4"
+    },
+    {
+        "value": 5,
+        "encoded": "5"
+    },
+    {
+        "value": 6,
+        "encoded": "ME"
+    },
+    {
+        "value": 7,
+        "encoded": "MS3"
+    },
+    {
+        "value": 8,
+        "encoded": "8"
+    },
+    {
+        "value": 9,
+        "encoded": "ME"
+    },
+    {
+        "value": 10,
+        "encoded": "10"
+    },
+    {
+        "value": 11,
+        "encoded": "11"
+    },
+    {
+        "value": 12,
+        "encoded": "ME"
+    },
+    {
+        "value": 13,
+        "encoded": "13"
+    },
+    {
+        "value": 14,
+        "encoded": "MS3"
+    },
+    {
+        "value": 15,
+        "encoded": "ME"
+    },
+    {
+        "value": 16,
+        "encoded": "16"
+    },
+    {
+        "value": 17,
+        "encoded": "17"
+    },
+    {
+        "value": 18,
+        "encoded": "ME"
+    },
+    {
+        "value": 19,
+        "encoded": "19"
+    },
+    {
+        "value": 20,
+        "encoded": "20"
+    },
+    {
+        "value": 21,
+        "encoded": "MS3 and ME"
+    },
+    {
+        "value": 22,
+        "encoded": "22"
+    },
+    {
+        "value": 23,
+        "encoded": "23"
+    },
+    {
+        "value": 24,
+        "encoded": "ME"
+    },
+    {
+        "value": 25,
+        "encoded": "25"
+    },
+    {
+        "value": 26,
+        "encoded": "26"
+    },
+    {
+        "value": 27,
+        "encoded": "ME"
+    },
+    {
+        "value": 28,
+        "encoded": "MS3"
+    },
+    {
+        "value": 29,
+        "encoded": "29"
+    },
+    {
+        "value": 30,
+        "encoded": "ME"
+    },
+    {
+        "value": 31,
+        "encoded": "31"
+    },
+    {
+        "value": 32,
+        "encoded": "32"
+    },
+    {
+        "value": 33,
+        "encoded": "ME"
+    },
+    {
+        "value": 34,
+        "encoded": "34"
+    },
+    {
+        "value": 35,
+        "encoded": "MS3"
+    },
+    {
+        "value": 36,
+        "encoded": "ME"
+    },
+    {
+        "value": 37,
+        "encoded": "37"
+    },
+    {
+        "value": 38,
+        "encoded": "38"
+    },
+    {
+        "value": 39,
+        "encoded": "ME"
+    },
+    {
+        "value": 40,
+        "encoded": "40"
+    },
+    {
+        "value": 41,
+        "encoded": "41"
+    },
+    {
+        "value": 42,
+        "encoded": "MS3 and ME"
+    },
+    {
+        "value": 43,
+        "encoded": "43"
+    },
+    {
+        "value": 44,
+        "encoded": "44"
+    },
+    {
+        "value": 45,
+        "encoded": "ME"
+    },
+    {
+        "value": 46,
+        "encoded": "46"
+    },
+    {
+        "value": 47,
+        "encoded": "47"
+    },
+    {
+        "value": 48,
+        "encoded": "ME"
+    },
+    {
+        "value": 49,
+        "encoded": "MS3"
+    },
+    {
+        "value": 50,
+        "encoded": "50"
+    },
+    {
+        "value": 51,
+        "encoded": "ME"
+    },
+    {
+        "value": 52,
+        "encoded": "52"
+    },
+    {
+        "value": 53,
+        "encoded": "53"
+    },
+    {
+        "value": 54,
+        "encoded": "ME"
+    },
+    {
+        "value": 55,
+        "encoded": "55"
+    },
+    {
+        "value": 56,
+        "encoded": "MS3"
+    },
+    {
+        "value": 57,
+        "encoded": "ME"
+    },
+    {
+        "value": 58,
+        "encoded": "58"
+    },
+    {
+        "value": 59,
+        "encoded": "59"
+    },
+    {
+        "value": 60,
+        "encoded": "ME"
+    },
+    {
+        "value": 61,
+        "encoded": "61"
+    },
+    {
+        "value": 62,
+        "encoded": "62"
+    },
+    {
+        "value": 63,
+        "encoded": "MS3 and ME"
+    },
+    {
+        "value": 64,
+        "encoded": "64"
+    },
+    {
+        "value": 65,
+        "encoded": "65"
+    },
+    {
+        "value": 66,
+        "encoded": "ME"
+    },
+    {
+        "value": 67,
+        "encoded": "67"
+    },
+    {
+        "value": 68,
+        "encoded": "68"
+    },
+    {
+        "value": 69,
+        "encoded": "ME"
+    },
+    {
+        "value": 70,
+        "encoded": "MS3"
+    },
+    {
+        "value": 71,
+        "encoded": "71"
+    },
+    {
+        "value": 72,
+        "encoded": "ME"
+    },
+    {
+        "value": 73,
+        "encoded": "73"
+    },
+    {
+        "value": 74,
+        "encoded": "74"
+    },
+    {
+        "value": 75,
+        "encoded": "ME"
+    },
+    {
+        "value": 76,
+        "encoded": "76"
+    },
+    {
+        "value": 77,
+        "encoded": "MS3"
+    },
+    {
+        "value": 78,
+        "encoded": "ME"
+    },
+    {
+        "value": 79,
+        "encoded": "79"
+    },
+    {
+        "value": 80,
+        "encoded": "80"
+    },
+    {
+        "value": 81,
+        "encoded": "ME"
+    },
+    {
+        "value": 82,
+        "encoded": "82"
+    },
+    {
+        "value": 83,
+        "encoded": "83"
+    },
+    {
+        "value": 84,
+        "encoded": "MS3 and ME"
+    },
+    {
+        "value": 85,
+        "encoded": "85"
+    },
+    {
+        "value": 86,
+        "encoded": "86"
+    },
+    {
+        "value": 87,
+        "encoded": "ME"
+    },
+    {
+        "value": 88,
+        "encoded": "88"
+    },
+    {
+        "value": 89,
+        "encoded": "89"
+    },
+    {
+        "value": 90,
+        "encoded": "ME"
+    },
+    {
+        "value": 91,
+        "encoded": "MS3"
+    },
+    {
+        "value": 92,
+        "encoded": "92"
+    },
+    {
+        "value": 93,
+        "encoded": "ME"
+    },
+    {
+        "value": 94,
+        "encoded": "94"
+    },
+    {
+        "value": 95,
+        "encoded": "95"
+    },
+    {
+        "value": 96,
+        "encoded": "ME"
+    },
+    {
+        "value": 97,
+        "encoded": "97"
+    },
+    {
+        "value": 98,
+        "encoded": "MS3"
+    },
+    {
+        "value": 99,
+        "encoded": "ME"
+    },
+    {
+        "value": 100,
+        "encoded": "100"
+    }
+]
+      

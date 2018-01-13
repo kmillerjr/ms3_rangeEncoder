@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+    <flow name="EncodeRangeFlow">
+        <logger message="&quot;EncodeRangeFlow called&quot;" level="DEBUG" doc:name="Logger"/>
+        <set-variable variableName="startValue" value="#[message.inboundProperties.'http.query.params'.startValue]" doc:name="set Start Value"/>
+        <set-variable variableName="endValue" value="#[message.inboundProperties.'http.query.params'.endValue]" doc:name="Variable"/>
+        <component class="com.miller.ms3.TechChallenge.RangeEncoder" doc:name="Java" metadata:id="5bc44109-30df-4ef7-8e59-b5bf3e7db244"/>
+        <json:object-to-json-transformer returnClass="java.lang.String" doc:name="Object to JSON"/>
+        <dw:transform-message doc:name="Transform Message" metadata:id="8c6addc5-6bf6-402c-abaa-3572e0aa71d0">
+            <dw:input-payload mimeType="application/json"/>
+            <dw:input-outbound-property mimeType="application/java" propertyName="MULE_ENCODING"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+	exclusiveMaximum: "true",
+	maximum: flowVars.endValue as :number,
+	minimum: flowVars.startValue as :number,
+	range: payload map ((payload01 , indexOfPayload01) -> {
+		encoded: payload01.encoded,
+		value: payload01.value
+	})
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <logger message="&quot;Payload: &quot; +$[payload]" level="DEBUG" doc:name="Logger"/>
+    </flow>
+</mule>

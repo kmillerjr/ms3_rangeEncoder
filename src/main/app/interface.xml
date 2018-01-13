@@ -3,19 +3,18 @@
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd
 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
-    <http:listener-config name="EncodedRangeAPI-httpListenerConfig" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
     <apikit:config name="EncodedRangeAPI-config" raml="EncodedRangeAPI.raml" consoleEnabled="false" doc:name="Router"/>
     <flow name="EncodedRangeAPI-main">
-        <http:listener config-ref="EncodedRangeAPI-httpListenerConfig" path="/api/*" doc:name="HTTP"/>
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/api/*" doc:name="HTTP"/>
         <apikit:router config-ref="EncodedRangeAPI-config" doc:name="APIkit Router"/>
         <exception-strategy ref="EncodedRangeAPI-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy"/>
     </flow>
     <flow name="EncodedRangeAPI-console">
-        <http:listener config-ref="EncodedRangeAPI-httpListenerConfig" path="/console/*" doc:name="HTTP"/>
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/console/*" doc:name="HTTP"/>
         <apikit:console config-ref="EncodedRangeAPI-config" doc:name="APIkit Console"/>
     </flow>
     <flow name="get:/EncodedRange:EncodedRangeAPI-config">
-        <set-payload value="{  &#xA;   &quot;minimum&quot;:1,&#xA;   &quot;maximum&quot;:10,&#xA;   &quot;exclusiveMaximum&quot;:true,&#xA;   &quot;range&quot;:[ &#xA;      {  &#xA;          &quot;value&quot;:1,&#xA;          &quot;encoded&quot;:&quot;1&quot;&#xA;      },&#xA;      {  &#xA;         &quot;value&quot;:2,&#xA;         &quot;encoded&quot;:&quot;2&quot;&#xA;      },&#xA;      {  &#xA;         &quot;value&quot;:3,&#xA;         &quot;encoded&quot;:&quot;ME&quot;&#xA;      },&#xA;      {  &#xA;         &quot;value&quot;:4,&#xA;         &quot;encoded&quot;:&quot;4&quot;&#xA;      },&#xA;      {  &#xA;         &quot;value&quot;:5,&#xA;         &quot;encoded&quot;:&quot;5&quot;&#xA;      },&#xA;      {  &#xA;         &quot;value&quot;:6,&#xA;         &quot;encoded&quot;:&quot;ME&quot;&#xA;      },&#xA;      {  &#xA;         &quot;value&quot;:7,&#xA;         &quot;encoded&quot;:&quot;MS3&quot;&#xA;      },&#xA;      {  &#xA;         &quot;value&quot;:8,&#xA;         &quot;encoded&quot;:&quot;8&quot;&#xA;      },&#xA;      {  &#xA;         &quot;value&quot;:9,&#xA;         &quot;encoded&quot;:&quot;ME&quot;&#xA;      },&#xA;      {  &#xA;         &quot;value&quot;:10,&#xA;         &quot;encoded&quot;:&quot;10&quot;&#xA;      }&#xA;   ]&#xA;}" doc:name="Set Payload"/>
+        <flow-ref name="EncodeRangeFlow" doc:name="EncodeRangeFlow"/>
     </flow>
     <apikit:mapping-exception-strategy name="EncodedRangeAPI-apiKitGlobalExceptionMapping">
         <apikit:mapping statusCode="404">

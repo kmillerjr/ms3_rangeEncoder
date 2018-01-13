@@ -1,0 +1,17 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "IncrementInterval"
+        },
+        "outboundProperties": {
+            "MULE_ENCODING": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "encoded"
+            }
+        }
+    },
+    "outputMessageMetadata": {},
+    "id": "8c6addc5-6bf6-402c-abaa-3572e0aa71d0",
+    "version": "5.2.0.0"
+}

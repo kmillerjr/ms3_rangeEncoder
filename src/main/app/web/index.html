@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<title>“MS3 and ME” Technical Challenge</title>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script src="script.js"></script>
+</head>
+
+<body>
+	<h1>“MS3 and ME” Technical Challenge</h1>
+	<form id='technicalChallenge'>
+		<p>
+			Start Value (1 to 200):<input type="number" id='startValue'
+				placeholder="value from 1 to 200" min="1" max="200" value='1'
+				required>
+		</p>
+		<p>
+			End Value(1 to 200):<input type="number" id='endValue'
+				placeholder="value from 1 to 200" min="1" max="200" value='200'
+				required>
+		</p>
+		<p>
+			Reverse Order<input type="checkbox" id="reversed" value="true" />
+		</p>
+		<p>
+			<button type="button" onclick="requestEncodedRange()">Get Encoded Range</button>
+		</p>
+	</form>
+	<div id='results'>
+	</div>
+</body>
+
+</html>

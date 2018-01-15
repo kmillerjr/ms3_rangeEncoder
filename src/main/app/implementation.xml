@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
 http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
 http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
     <flow name="EncodeRangeFlow">
-        <logger message="&quot;EncodeRangeFlow called&quot;" level="DEBUG" doc:name="Logger"/>
+        <logger message="&quot;EncodeRangeFlow called&quot;" level="INFO" doc:name="Logger"/>
         <set-variable variableName="startValue" value="#[message.inboundProperties.'http.query.params'.startValue]" doc:name="set Start Variable"/>
         <set-variable variableName="endValue" value="#[message.inboundProperties.'http.query.params'.endValue]" doc:name="set End Variable"/>
         <set-variable variableName="reversed" value="#[(message.inboundProperties.'http.query.params'.reversed == empty) ? 'false' : message.inboundProperties.'http.query.params'.reversed]" doc:name="Set reversed Variable"/>
@@ -31,6 +31,6 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 	})
 }]]></dw:set-payload>
         </dw:transform-message>
-        <logger message="&quot;Payload: &quot; +$[payload]" level="DEBUG" doc:name="Logger"/>
+        <logger message="&quot;Encode Range Flow completed&quot;" level="INFO" doc:name="Logger"/>
     </flow>
 </mule>

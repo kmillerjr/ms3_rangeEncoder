@@ -17,13 +17,15 @@ function requestEncodedRange() {
 		fetch(encoderURL)
 			.then(function(response) {
 			 
-			 // HTML - print out of JSON response
-			response.text()
-			.then(function(text) {
-				jsonTextCreate(text);
-				 
-				console.info("JSON: " + text);
+			response.json()
+			.then(function(json) {
+				 // HTML - print out of JSON response
+				jsonTextCreate(JSON.stringify(json, null, 4));
+				
+				//HTML - print Range in Table	
+				tableCreate(json);
 			})
+			
 		})
 		.catch(function(error) {
 			// If there is any error they are caught here
@@ -57,36 +59,45 @@ function clearResultDiv(){
 	document.getElementById("results").innerHTML = "";
 }
 
-function jsonTextCreate(json){
+function jsonTextCreate(jsonText){
 	var resultDiv = document.getElementById("results");
     var x = document.createElement("PRE");
-    // var t = document.createTextNode(JSON.stringify(json, undefined, 2));
-    var t = document.createTextNode(json);
+    var t = document.createTextNode(jsonText);
     x.appendChild(t);
     x.style ="word-wrap: break-word; white-space: pre-wrap;";
     resultDiv.appendChild(x);
 }
 
-function tableCreate(){
-	var body = document.getElementsByTagName('body')[0];
+function tableCreate(json){
+
+	var resultDiv = document.getElementById("results");
     var tbl = document.createElement('table');
-    tbl.style.width = '100%';
+    tbl.style.width = '25%';
     tbl.setAttribute('border', '1');
     var tbdy = document.createElement('tbody');
-    for (var i = 0; i < 3; i++) {
-        var tr = document.createElement('tr');
-        for (var j = 0; j < 2; j++) {
-            if (i == 2 && j == 1) {
-                break
-            } else {
-                var td = document.createElement('td');
-                td.appendChild(document.createTextNode('\u0020'))
-                i == 1 && j == 1 ? td.setAttribute('rowSpan', '2') : null;
-                tr.appendChild(td)
-            }
-        }
-        tbdy.appendChild(tr);
+
+    //Header Row
+    var tr = document.createElement('tr');
+    var th = document.createElement('th');
+    th.appendChild(document.createTextNode('value'));
+    tr.appendChild(th);
+    var encodedTh = document.createElement('th');
+    encodedTh.appendChild(document.createTextNode('encoded'));
+    tr.appendChild(encodedTh);
+    tbdy.appendChild(tr)
+
+	//each item in the range array from json
+    for(var item in json.range) {
+    	console.log(json.range[item]);
+    	var tr = document.createElement('tr');
+    	var valuetd = document.createElement('td');
+    	valuetd.appendChild(document.createTextNode(json.range[item].value));
+		tr.appendChild(valuetd);
+		var encodetd = document.createElement('td');
+		encodetd.appendChild(document.createTextNode(json.range[item].encoded));
+		tr.appendChild(encodetd);
+		tbdy.appendChild(tr)
     }
     tbl.appendChild(tbdy);
-    body.appendChild(tbl)
+    resultDiv.appendChild(tbl)
 }

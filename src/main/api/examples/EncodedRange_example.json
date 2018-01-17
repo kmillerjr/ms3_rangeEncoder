@@ -1,7 +1,7 @@
 {  
-   "minimum":1,
-   "maximum":10,
-   "exclusiveMaximum":true,
+   "startValue":1,
+   "endValue":10,
+   "exclusiveEndValue":true,
    "range":[ 
       {  
           "value":1,

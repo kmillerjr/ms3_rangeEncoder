@@ -2,9 +2,9 @@
 
 type: object
 properties: 
-  minimum: integer
-  maximum: integer
-  exclusiveMaximum: boolean
+  startValue: integer
+  endValue: integer
+  exclusiveEndValue: boolean
   range:
     type: array 
     items: !include IncrementType.raml#increment 

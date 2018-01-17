@@ -22,9 +22,9 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 %output application/json
 ---
 {
-	exclusiveMaximum: "true",
-	maximum: flowVars.endValue as :number,
-	minimum: flowVars.startValue as :number,
+	exclusiveEndValue: "true",
+	endValue: flowVars.endValue as :number,
+	startValue: flowVars.startValue as :number,
 	range: payload map ((payload01 , indexOfPayload01) -> {
 		encoded: payload01.encoded,
 		value: payload01.value

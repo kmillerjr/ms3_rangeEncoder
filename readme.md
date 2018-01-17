@@ -10,14 +10,14 @@ converts each number in the range, where:
 * multiples of 3 are convert to “ME”, and 
 * multiples of both 7 and 3 convert to “MS3 and ME”.  
 
-The input range has in the Web App has a limit from a minimum of 1 to a maximum of 200. 
-the API calls has no limit, and accepts positive and negative numbers.  API response is JSON
+The input range in the Web App has a limit from a minimum of 1 to a maximum of 200. 
+The API calls has no limit and accepts positive and negative numbers.  API response is JSON
 
 
 ## Installation
 
-The application has deployed to cloudhub:
-http://ms3-rangeencoder.cloudhub.io
+The application has been deployed to cloudhub:
+http://ms3-rangeencoder.loudhub.io
 
 ## Usage
 

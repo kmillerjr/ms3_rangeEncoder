@@ -17,7 +17,7 @@ The API calls has no limit and accepts positive and negative numbers.  API respo
 ## Installation
 
 The application has been deployed to cloudhub:
-http://ms3-rangeencoder.loudhub.io
+http://ms3-rangeencoder.cloudhub.io
 
 ## Usage
 
